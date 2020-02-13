@@ -26,12 +26,11 @@
 #endif
 
 #include <QAbstractScrollArea>
-
-class QMutex;
-class QTimer;
+#include <QMutex>
+#include <QTimer>
 #if XPDFWIDGET_PRINTING
-class QPrinter;
-class QPrintDialog;
+#include <QPrinter>
+#include <QPrintDialog>
 #endif
 
 class GString;

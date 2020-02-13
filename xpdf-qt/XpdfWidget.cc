@@ -1852,7 +1852,7 @@ QString XpdfWidget::getEmbeddedFileName(int idx) {
     }
     return s;
   } catch (GMemException e) {
-    return 0;
+    return QString();
   }
 }
 
@@ -1996,7 +1996,7 @@ void XpdfWidget::mousePressEvent(QMouseEvent *e) {
     y = (int)(e->y() * scaleFactor);
     if (e->button() == Qt::LeftButton) {
       core->startSelection(x, y);
-    } else if (e->button() == Qt::MidButton) {
+    } else if (e->button() == Qt::MiddleButton) {
       core->startPan(x, y);
     }
   }
@@ -2011,7 +2011,7 @@ void XpdfWidget::mouseReleaseEvent(QMouseEvent *e) {
     y = (int)(e->y() * scaleFactor);
     if (e->button() == Qt::LeftButton) {
       core->endSelection(x, y);
-    } else if (e->button() == Qt::MidButton) {
+    } else if (e->button() == Qt::MiddleButton) {
       core->endPan(x, y);
     }
   }

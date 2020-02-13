@@ -2816,7 +2816,9 @@ void XpdfViewer::createWindow() {
 
   createToolBar();
   addToolBar(toolBar);
+#ifndef QT_KATIE
   setUnifiedTitleAndToolBarOnMac(true);
+#endif
   if (globalParams->getInitialToolbarState()) {
     toggleToolbarMenuItem->setChecked(true);
   } else {

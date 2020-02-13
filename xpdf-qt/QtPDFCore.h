@@ -16,6 +16,8 @@
 #endif
 
 #include <QDateTime>
+#include <QWidget>
+#include <QScrollBar>
 #include "gtypes.h"
 #include "SplashTypes.h"
 #include "PDFCore.h"
@@ -24,9 +26,6 @@ class GString;
 class BaseStream;
 class PDFDoc;
 class LinkAction;
-
-class QWidget;
-class QScrollBar;
 
 //------------------------------------------------------------------------
 // callbacks
